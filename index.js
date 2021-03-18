@@ -34,7 +34,13 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+const sandwich = createMenuItem("sandwich", 100, "lunch");
+const salad = createMenuItem("salad", 10, "dinner");
+const pizza = createMenuItem("pizza", 12, "breakfast");
 
+console.log(sandwich);
+console.log(salad);
+console.log(pizza);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
@@ -53,8 +59,18 @@ export const burger = {
     name: "Burger",
     price: 18,
     category: "Lunch",
-    /*Your code here*/
+    discount(status) {
+        let discount;
+        if (status === 'teacher' || status === 'student') {
+            discount = .25;
+        } else {
+            discount = .1;
+        }
+        return this.price - (this.price * discount);
+    }
 }
+
+console.log(burger.discount('teacher'));
 
 
 

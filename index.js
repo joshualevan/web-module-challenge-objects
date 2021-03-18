@@ -174,9 +174,25 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
-function getReviewByRating( /* code here */ ) {
-    /* code here */
+// const testArr = ['hot dog', 'shirt', 'television'];
+
+// const yourFunc = item => {
+//     console.log(`I like this ${item}`);
+// }
+
+// const itemOutput = arr => {
+//     arr.forEach(newItem => yourFunc(newItem));
+// }
+
+// itemOutput(testArr);
+
+
+function getReviewByRating(arr, rating) {
+    let newArr = arr.filter(item => item.rating >= rating && item.rating <= (rating + 0.9));
+    return newArr;
 }
+const ratings = getReviewByRating(reviews, 3);
+console.log(ratings);
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
@@ -192,7 +208,7 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews( /* code here */ ) {
+function getLongReviews(arr) {
     /* code here */
 }
 

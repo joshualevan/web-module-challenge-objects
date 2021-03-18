@@ -174,6 +174,8 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
+
+
 // const testArr = ['hot dog', 'shirt', 'television'];
 
 // const yourFunc = item => {
@@ -209,8 +211,16 @@ Use the getLongReviews function below to do the following:
 */
 
 function getLongReviews(arr) {
-    /* code here */
+    let newArr = arr.forEach(obj => obj.feedback.split(' '));
+    let filteredArr = newArr.filter(obj => obj.feedback.length > 15);
+
+    return filteredArr;
 }
+
+
+// const reviewsLongerThan15 = getLongReviews(reviews);
+
+// console.log(reviewsLongerThan15);
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
